@@ -98,3 +98,50 @@ a.Display()'''
         print(self.name,self.age,self.place)
 a=Details()
 a.Display()'''
+
+#difference b/w _ and __
+#We generally use it for private variables, that means whenever we use double leading underscore for a variable our python interpreter
+#treats it as a special variable in order to avoid main conflicts with methods in inner classes.
+
+'''class Employee():
+    def __init__(self):
+        self.name="mahesh"
+        self._mailid="m@gmail.com"
+        self.__salary=10000
+a=Employee()
+print(dir(a))
+print(a.name)
+print(a._mailid)
+#print(a.__salary) Error
+print(a._Employee__salary)'''
+
+'''class Employee():
+    def __init__(self):
+        self.name1="mahesh"
+        self.mailid1="m@gmail.com"
+        self.__salary1=100000
+        self.name2="manoj"
+        self.mailid2="mn@gmail.com"
+        self.__salary2=500000
+a=Employee()
+print(dir(a))
+print(a.name1, a.name2)
+print(a.mailid1, a.mailid2)
+print(a._Employee__salary1, a._Employee__salary2)'''
+
+'''class Employee1():
+    def __init__(self):
+        self.name1="mahesh"
+        self.mailid1="m@gmail.com"
+        self.__salary1=100000
+class Employee2():
+    def __init__(self):
+        self.name2="manoj"
+        self.mailid2="mn@gmail.com"
+        self.__salary2=500000
+a=Employee1()
+b=Employee2()
+print(a.name1, b.name2)
+print(a.mailid1, b.mailid2)
+print(a._Employee1__salary1, b._Employee2__salary2)'''
+
